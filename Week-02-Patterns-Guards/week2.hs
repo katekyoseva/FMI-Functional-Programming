@@ -1,6 +1,3 @@
-{-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE UnicodeSyntax #-}
-
 -- Tasks from Exercise - Week 2
 -- Task 1
 max3 :: Int -> Int -> Int -> Int
