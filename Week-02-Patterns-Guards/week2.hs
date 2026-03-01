@@ -67,7 +67,7 @@ main = do
     --print(signNum' (-6))
 
 -- Bonus Task
-    print(classifyShipment ("food", 200, "Bulgaria", 9))
-    print(classifyShipment ("chemicals", 50, "Germany", 5))
-    print(classifyShipment ("electronics", 5, "Plovdiv", 6))
-    print(classifyShipment ("food", -2, "Bulgaria", 5))
+    --print(classifyShipment ("food", 200, "Bulgaria", 9))
+    --print(classifyShipment ("chemicals", 50, "Germany", 5))
+    --print(classifyShipment ("electronics", 5, "Plovdiv", 6))
+    --print(classifyShipment ("food", -2, "Bulgaria", 5))
