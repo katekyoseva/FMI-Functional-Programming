@@ -27,12 +27,15 @@ isValidDate day month year
     | day >= 1 && day <= 29 && month == 2 && isLeapYear(year) == True = True
     | otherwise = False
 -- Task 4
---(~=) :: Double -> Double -> Bool
---(~=) a b 
---  | a == b = True
---  | otherwise = False
+infix 4 ~=
+(~=) :: Double -> Double -> Bool
+(~=) x y = abs (x - y) < 1e-9
 -- Task 5
---median3 :: (Int, Int, Int) -> Int
+median3 :: (Int, Int, Int) -> Int
+median3 (x, y, z) 
+    | (x <= y && y <= z) || (z <= y && y <= x) = y
+    | (y <= x && x <= z) || (z <= x && x <= y) = x
+    | otherwise = z
 
 main :: IO()
 main = do

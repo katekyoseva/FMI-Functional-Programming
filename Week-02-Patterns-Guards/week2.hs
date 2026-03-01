@@ -1,3 +1,6 @@
+{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE UnicodeSyntax #-}
+
 -- Tasks from Exercise - Week 2
 -- Task 1
 max3 :: Int -> Int -> Int -> Int
@@ -27,16 +30,21 @@ signNum' num
     | otherwise = -1
 
 -- Bonus Task 
-classifyPackages :: String -> Double -> String -> Int -> String
-classifyPackages package weight destination priority
-    | package == "food" && weight > 0 && weight < 500 && priority > 8 && priority <= 10 
-        = "Emergency cold transport"
-    | package == "chemicals" && destination /= "Bulgaria" 
-        = "Dangerous international package"
-    | package == "electronics" && weight > 1  && weight < 10 && destination /= "Sofia"
-        = "Fragile electronics"
-    | weight < 0 || priority < 1 || priority > 10 = "Invalid"
+classifyShipment :: (String, Double, String, Int) -> String
+classifyShipment (contentType, weight, destination, priority)
+    | not isValid = "Invalid"
+    | contentType == "food" && weight <= 500 && priority > 8
+        = "Urgent Refrigerated Transport"
+    | contentType == "chemicals" && destination /= "Bulgaria"
+        = "Dangerous Cargo"
+    | contentType == "electronics" && weight > 1 && weight < 10 && destination /= "Sofia"
+        = "Fragile Electronics"
     | otherwise = "Standard"
+    where
+    isValid =
+        weight >= 0 &&
+        priority >= 1 && priority <= 10 &&
+        contentType `elem` ["food", "chemicals", "electronics"]
     
 main :: IO ()
 main = do
@@ -59,4 +67,7 @@ main = do
     --print(signNum' (-6))
 
 -- Bonus Task
-    --print(classifyPackages "food" 123 "Bulgaria" 10)
+    print(classifyShipment ("food", 200, "Bulgaria", 9))
+    print(classifyShipment ("chemicals", 50, "Germany", 5))
+    print(classifyShipment ("electronics", 5, "Plovdiv", 6))
+    print(classifyShipment ("food", -2, "Bulgaria", 5))
