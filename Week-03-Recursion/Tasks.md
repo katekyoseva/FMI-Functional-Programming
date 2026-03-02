@@ -63,10 +63,12 @@ myLength :: [a] -> Int
 ```haskell
 myElem :: Eq a => a -> [a] -> Bool
 ```
+> `Eq a` гарантира, че типът данни може да бъде сравнен (като използваме ==)
 
 ```haskell
 >>> myElem 3 [1, 2, 3, 4]
 True
+
 >>> myElem 5 [1, 2, 3, 4]
 False
 ```
