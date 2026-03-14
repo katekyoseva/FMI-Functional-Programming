@@ -37,4 +37,4 @@ main = do
     --print(isSorted [1, 3, 5])
     --print(isSorted [1, 5, 3])
 -- Task 5
-    print(removeAt 1 [1, 2, 3, 4])
+    --print(removeAt 1 [1, 2, 3, 4])
