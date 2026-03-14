@@ -59,5 +59,5 @@ main = do
 -- Task 5
     --print(removeDuplicates [1, 3, 2, 1, 3, 4])
 -- Task 6
-    print(isInfixOf' [2, 3] [1, 2, 3, 4])
-    print(isInfixOf' [2, 4] [1, 2, 3, 4])
+    --print(isInfixOf' [2, 3] [1, 2, 3, 4])
+    --print(isInfixOf' [2, 4] [1, 2, 3, 4])
