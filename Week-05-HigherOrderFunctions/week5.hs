@@ -1,12 +1,12 @@
 -- Tasks from Exercise - Week 5
 -- Task 1
 myMap :: (a -> b) -> [a] -> [b]
-myMap f [] = []
+myMap _ [] = []
 myMap f (x:xs) = f x : myMap f xs
 myFilter :: (a -> Bool) -> [a] -> [a]
 myFilter pred [] = []
 myFilter pred (x:xs) 
-    | pred x == True = x : myFilter pred xs
+    | pred x = x : myFilter pred xs
     | otherwise = myFilter pred xs
 -- Task 2
 applyAll :: [a -> a] -> a -> a
