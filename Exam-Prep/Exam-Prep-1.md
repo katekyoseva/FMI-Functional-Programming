@@ -30,15 +30,15 @@
 
 ---
 
-## Задача 3: `filterSamllerThan`
-Да се дефинира функция filterSamllerThan, която получава списък и число и премахва елеминтет на списъка, които са по-малки от числото.
+## Задача 3: `filterSmallerThan`
+Да се дефинира функция `filterSmallerThan`, която получава списък и число и премахва елеминтет на списъка, които са по-малки от числото.
 
 ```haskell
->> filterSamllerThan [1,5,8,2,10] 5
+>> filterSmallerThan [1,5,8,2,10] 5
 [5,8,10]
->> filterSamllerThan [3,4,5] 4
+>> filterSmallerThan [3,4,5] 4
 [4,5]
->> filterSamllerThan [1,2,3] 10
+>> filterSmallerThan [1,2,3] 10
 []
 ```
 ---
@@ -49,10 +49,6 @@
 ```haskell
 >> isAscending 1234
 True
->> isAscending 1129
-True
->> isAscending 1324
-False
 >> isAscending 987
 False
 ```
@@ -62,14 +58,10 @@ False
 Да се дефинира фунцкия `digits :: String -> String`, която получава низ и намира цифрите в него.
 
 ```haskell
->> isAscending 1234
-True
->> isAscending 1129
-True
->> isAscending 1324
-False
->> isAscending 987
-False
+>>> digits "abc123"
+"123"
+>>> digits "no digits here"
+""
 ```
 ---
 
@@ -81,8 +73,8 @@ False
 6
 >> digitsSum "a1b2c3"
 6
->> digitsSum "2024"
-8
+>> digitsSum "2026"
+10
 >> digitsSum "hello"
 0
 ```
@@ -111,8 +103,8 @@ True
 True
 >> isCapitalized "Hello"
 False
->> isCapitalized "abc"
-False
+>> isCapitalized ""
+True
 ```
 ---
 
