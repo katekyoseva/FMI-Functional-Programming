@@ -151,9 +151,9 @@ students :: [(String,Int,[(String,Double)])]
 ```
 
 ## Задача 12 
-Като използвате списъка от наредени тройки students от предишната задача, дефинирайте функция `needToExamine :: String -> [(String,Int,[(String,Double)])] -> String`, която връща стъдентите, които нямат оценки по подадения предмет.
+Като използвате списъка от наредени тройки students от предишната задача, дефинирайте функция `needToExamine :: String -> [(String,Int,[(String,Double)])] -> [String]`, която връща стъдентите, които нямат оценки по подадения предмет.
 
 ```haskell
 >>> needToExamine "dis" students
-"Petyr"
+["Petyr"]
 ```
